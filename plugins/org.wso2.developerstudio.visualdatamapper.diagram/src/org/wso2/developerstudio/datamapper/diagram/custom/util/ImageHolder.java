@@ -42,6 +42,7 @@ public class ImageHolder {
 	private static final String ARROW_EAST = "icons/ico20/arrowEast.png";
 	private static final String ARROW_WEST = "icons/ico20/arrowWest.png";
 	private static final String BLACK_COLOURED = "icons/gmf/black.jpg";
+	private static final String MAP_CONTENT = "icons/gmf/map-content.png";
 	
 	private Image elementImage;
 	private Image attributeImage;
@@ -58,6 +59,7 @@ public class ImageHolder {
 	private Image arrowEastImage;
 	private Image arrowWestImage;
 	private Image blackColouredImage;
+	private Image addMapContentImage;
 	
 	private ImageHolder() {
 		
@@ -93,6 +95,8 @@ public class ImageHolder {
 		ImageDescriptor arrowWestImgDesc = DataMapperDiagramEditorPlugin.getBundledImageDescriptor(ARROW_WEST);
 		ImageDescriptor blackColouredImgDesc = AbstractUIPlugin
 				.imageDescriptorFromPlugin(ORG_WSO2_DEVELOPERSTUDIO_VISUALDATAMAPPER_DIAGRAM, BLACK_COLOURED);
+		ImageDescriptor mapContentDesc = AbstractUIPlugin
+				.imageDescriptorFromPlugin(ORG_WSO2_DEVELOPERSTUDIO_VISUALDATAMAPPER_DIAGRAM, MAP_CONTENT);
 		
 		elementImage = elementImgDescCollapse.createImage();
 		attributeImage = attributeImgDesc.createImage();
@@ -109,6 +113,7 @@ public class ImageHolder {
 		arrowEastImage = arrowEastImgDesc.createImage();
 		arrowWestImage = arrowWestImgDesc.createImage();
 		blackColouredImage = blackColouredImgDesc.createImage();
+		addMapContentImage = mapContentDesc.createImage();
 	}
 	
 	public Image getElementImage() {
@@ -169,6 +174,8 @@ public class ImageHolder {
 	public Image getBlackColouredImage() {
 		return blackColouredImage;
 	}
+
+	public Image getMapContentImage() { return addMapContentImage; }
 	
 	public static ImageHolder getInstance() {
 		return ImageHolderInstanceHolder.IMAGEHOLDER_INSTANCE;
